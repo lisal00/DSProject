@@ -53,8 +53,7 @@ int calculator::eval(const std::string &expression) {
   } else {
     throw invalid_argument("Stack is empty");
   }
-} // user name quick quick quick quick quick quick quick quick
-//from repository settings uh phucv2376
+}
 
 /**Evalutes the current operator. Pops 2 operands off operand stack
 and applies the operator
@@ -72,21 +71,21 @@ int calculator::eval_op(char op) {
   int result = 0;
 
   switch (op) {
-  case '+':
-    result = lhs + rhs;
-    break;
-  case '-':
-    result = lhs - rhs;
-    break;
-  case '*':
-    result = lhs * rhs;
-    break;
-  case '/':
-    result = lhs / rhs;
-    break;
-  case '%':
-    result = lhs % rhs;
-    break;
+    case '+':
+        result = lhs + rhs;
+        break;
+    case '-':
+        result = lhs - rhs;
+        break;
+    case '*':
+        result = lhs * rhs;
+        break;
+    case '/':
+        result = lhs / rhs;
+        break;
+    case '%':
+        result = lhs % rhs;
+        break;
   }
   return result;
 }

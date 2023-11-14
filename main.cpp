@@ -29,6 +29,3 @@ int main(){
     }
     return 0;
 }
-
-// #include <iostream> 
-//thats so not slay queen
