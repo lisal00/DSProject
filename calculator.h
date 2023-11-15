@@ -12,7 +12,7 @@ class calculator{
     @return The value of the expression
     @throw error
     */
-    int eval(const std::string& expression);
+    int eval(std::string& expression);
   private:
     /**Evalutes the current operator. Pops 2 operands off operand stack
     and applies the operator

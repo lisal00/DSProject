@@ -1,7 +1,9 @@
 #include <iostream>
+#include <iomanip>
 #include "balanced.h"
 #include "infix.h"
 #include "calculator.h"
+#include "binary.h"
 
 using namespace std;
 
@@ -22,6 +24,7 @@ int main(){
             //perform calculator function 
             int res = calculate.eval(postfix);
             cout << res << endl;
+            cout << "Binary: " << DectoBin(res); 
         } else{
             cout << " is not balanced. Invalid. \n";
         }
