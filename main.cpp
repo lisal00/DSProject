@@ -1,34 +1,52 @@
-#include <iostream>
-#include <iomanip>
-#include "balanced.h"
-#include "infix.h"
-#include "calculator.h"
-#include "binary.h"
+#include <wx/wx.h>
 
-using namespace std;
+class MyFrame : public wxFrame
+{
+public:
+	MyFrame(const wxString &title)
+		: wxFrame(NULL, wxID_ANY, title)
+	{
 
-int main(){
-    infix infix;
-    calculator calculate;
-  
-    cout << "Enter an expression. \n";
-    string expression; 
-    string postfix;
+		// Create a button
+		wxButton *calB = new wxButton(this, wxID_ANY, "Calculate", wxPoint(200, 50), wxSize(200, 60), 0);
+		wxButton *binB = new wxButton(this, wxID_ANY, "Binary Converter", wxPoint(450, 50), wxSize(200, 60), 0);
+		wxButton *postfixB = new wxButton(this, wxID_ANY, "Postfix Converter", wxPoint(700, 50), wxSize(200, 60), 0);
+		wxStaticText *staticText = new wxStaticText(this, wxID_ANY, "Enter an ex");
 
-    while (getline(cin, expression) && (expression != "")){
-        cout << expression;
-        if (is_balanced(expression)){
-            cout << " is balanced.\n";
-            postfix = infix.convert(expression);
-            cout << "\nInfix to postfix: " << postfix << endl;
-            //perform calculator function 
-            int res = calculate.eval(postfix);
-            cout << res << endl;
-            cout << "Binary: " << DectoBin(res); 
-        } else{
-            cout << " is not balanced. Invalid. \n";
-        }
-        cout << "\nEnter another expression: ";
-    }
-    return 0;
-}
+		// Bind a function to handle button click events
+		calB->Bind(wxEVT_BUTTON, &MyFrame::OnCalBClick, this);
+		// binB->Bind(wxEVT_BUTTON, &MyFrame::OnButtonClick, this);
+		this
+
+			// Event handler for button click
+			void
+			OnCalBClick(wxCommandEvent & event)
+		{
+
+			// Show an input box
+		}
+
+		// Declare the event table
+		wxDECLARE_EVENT_TABLE();
+	};
+
+	// Event table for MyFrame
+	wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
+		EVT_BUTTON(wxID_ANY, MyFrame::OnCalBClick)
+
+			wxEND_EVENT_TABLE()
+
+				class MyApp : public wxApp
+	{
+	public:
+		virtual bool OnInit()
+		{
+			MyFrame *frame = new MyFrame("Our very great project DU MA 他媽的");
+			frame->SetClientSize(1000, 500);
+			frame->Center();
+			frame->Show(true);
+			return true;
+		}
+	};
+
+	wxIMPLEMENT_APP(MyApp);
