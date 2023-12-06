@@ -5,7 +5,10 @@ class MyApp : public wxApp
 public:
 	virtual bool OnInit()
 	{
-		MainFrame *frame = new MainFrame("Our very great project DU MA 他媽的");
+		/**
+		Sets up window
+		*/
+		MainFrame *frame = new MainFrame("Calculator & Convertor");
 		frame->SetClientSize(1000, 500);
 		frame->Center();
 		frame->Show(true);

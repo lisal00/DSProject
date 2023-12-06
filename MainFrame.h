@@ -13,25 +13,24 @@ private:
 	wxButton *postfixB;
 	wxButton *resetB;
 
-	wxStaticText *staticText;
-	wxTextCtrl *textBox;
+	wxStaticText *directions = nullptr;
+	wxTextCtrl *textBox = nullptr;
 	calculator calcClass;
 	infix infix;
-	wxTextCtrl *control;
-	wxTextCtrl *resTextBox;
-	wxButton *calculateButton;
+	wxTextCtrl *resTextBox = nullptr;
+	wxButton *calculateButton = nullptr;
 
 public:
 	MainFrame(const wxString &title);
 
-	// Event handlers for buttons
 	void OnCalculatorSelection(wxCommandEvent &event);
 	void OnBinarySelection(wxCommandEvent &event);
 	void OnPostfixSelection(wxCommandEvent &event);
 
+	// Event handlers for buttons
 	void handlePostfix(wxCommandEvent &event);
 	void handleCalculate(wxCommandEvent &event);
 	void handleBinary(wxCommandEvent &event);
 
-	void resetState(wxCommandEvent &event);
+	void resetState();
 };
