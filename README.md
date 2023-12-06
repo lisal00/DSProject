@@ -1,3 +1,4 @@
 # DSProject
 
-clang++ -std=c++17 main.cpp -o prog `wx-config --cxxflags --libs`;./prog
+To run, download DSProject.exe from Assets https://github.com/lisal00/DSProject/releases/tag/billy. 
+Make sure all expressions entered have spaces inbetween each operand and operator. Example: ( 10 + 10 ) / 2
