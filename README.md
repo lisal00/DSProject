@@ -1,6 +1,6 @@
 # DSProject
 
-To run, download DSProject.exe from [Assets](https://github.com/lisal00/DSProject/releases/tag/billy).
+To run, download DSProject.exe from [Assets](https://github.com/lisal00/DSProject/releases/tag/bobby).
 Make sure all expressions entered have spaces inbetween each operand and operator. Example: ( 10 + 10 ) / 2
 
 We chose project 4, which implements a program that uses a stack to check if a given string of parantheses is balanced. The 3 additional features we added were a calculator, a binary converter, and a postfix converter.
