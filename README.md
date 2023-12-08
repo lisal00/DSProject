@@ -2,13 +2,15 @@
 
 Group Members: Phuc Vo, Lisa Mach
 
-To run the program, download DSProject.exe from [Assets](https://github.com/lisal00/DSProject/releases/tag/bobby) and run the exe. 
+To run the program, download DSProject.exe from [Assets](https://github.com/lisal00/DSProject/releases/tag/bobby) and run the exe.
 
-We chose project 4, which implements a program that uses a stack to check if a given string of parantheses is balanced. To create the GUI, we used wxWidgets. The 3 additional features we added were a calculator, a binary converter, and a postfix converter.
+We chose project 4, which implements a program that uses a stack to check if a given string of parantheses is balanced. To create the GUI, we used wxWidgets. wxWidgets allowed us to compile and run the program in both MacOS and Windows. The 3 additional features we added were a calculator, a binary converter, and a postfix converter.
 
 Clicking the "Calculator" button will allow you to enter in an expression, then click the "=" button, which will calculate the answer. Clicking the "Binary Converter" will ask you to enter in a positive integer. Clicking the "Convert" button will convert that value to binary. Clicking the "Postfix Converter" button will ask you to enter in an expression. Clicking the "Convert" button will convert the expression to its post fix form.
 
 Make sure all expressions entered have spaces in between each operand and operator. Example: ( 10 + 10 ) / 2
+
+\*Screenshots were taken from MacOS. The executable file provided was compiled from the same source code made possible by wxWidgets library. Running the program on Windows may result in a dissimilar GUI. However, functionality is identical.
 
 Calculator example:
 <img width="997" alt="Calculations" src="https://github.com/lisal00/DSProject/assets/71297716/70caf09b-7986-4187-a7fb-57fa056af922">
