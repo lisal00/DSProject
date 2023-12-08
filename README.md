@@ -1,5 +1,7 @@
 # DSProject
 
+Group Members: Phuc Vo, Lisa Mach
+
 To run the program, download DSProject.exe from [Assets](https://github.com/lisal00/DSProject/releases/tag/bobby) and run the exe. 
 
 We chose project 4, which implements a program that uses a stack to check if a given string of parantheses is balanced. To create the GUI, we used wxWidgets. The 3 additional features we added were a calculator, a binary converter, and a postfix converter.
