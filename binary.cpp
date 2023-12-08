@@ -1,23 +1,25 @@
 #include <string>
+#include <vector>
 using namespace std;
 
-/**Function to convert decimal to binary 
- *@param decimal The decimal to be converted to binary
+/** Function to convert decimal to binary
+ * @param decimal The decimal to be converted to binary
  */
-string DectoBin(int decimal){ 
-    string res = ""; //result string
-    int binaryNum[32]; // array to store binary number 
-    int i = 0; 
+string DectoBin(int decimal)
+{
+    vector<int> binaryNum; // vector to store binary number
 
-    while (decimal > 0) { 
-        // storing remainder in binary array 
-        binaryNum[i] = decimal % 2; 
-        decimal = decimal / 2; 
-        i++; 
+    while (decimal > 0)
+    {
+        binaryNum.push_back(decimal % 2); // push the remainder to binary vector
+        decimal = decimal / 2;
     }
 
-    for (int j = i - 1; j >= 0; j--){
-        res.append(to_string(binaryNum[j]));
+    // Convert from vector to string
+    string res = "";
+    for (auto it = binaryNum.rbegin(); it != binaryNum.rend(); ++it)
+    {
+        res.append(to_string(*it));
     }
 
     return res;
